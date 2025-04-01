@@ -95,7 +95,9 @@ const ListItem = ({item,level,addFileOrFolder})=>{
   }
   return (
     <>
-    <div css={css({
+    <div 
+// @ts-ignore
+    css={css({
       display: "flex",
       justifyContent : "space-between",
       paddingLeft : level * 20
@@ -104,7 +106,9 @@ const ListItem = ({item,level,addFileOrFolder})=>{
         {item?.type === 'Folder' && <span onClick={()=>updateIsExpanded(item.id)}>{isExpanded[item.id] ? "-" : "+"}</span>}
         {item.name}
       </span>
-      <span css={css({
+      <span 
+// @ts-ignore
+      css={css({
         margin : "2px 0px"
       })}>
         <RiFolderAddFill onClick={()=>addNewItem("Folder",item.id)}/>
@@ -156,7 +160,9 @@ const FilesAndFolders = () => {
 
   return (
     <div>
-      <span css={css({
+      <span 
+// @ts-ignore
+      css={css({
         background : "brown"
       })}>Files and Folders</span>
      <List data={allData} level={0} addFileOrFolder={addFileOrFolder}/>

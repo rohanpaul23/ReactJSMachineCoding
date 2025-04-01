@@ -1,10 +1,12 @@
+import React from 'react'
 import './App.css'
 import FilesAndFolders from './FilesAndFolders'
+import OTPInput from './OTPInput'
 
 function App() {
   return (
     <>
-    <FilesAndFolders/>
+    <OTPInput noOfInputs={5}/>
     </>
   )
 }
