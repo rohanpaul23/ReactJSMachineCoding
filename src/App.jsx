@@ -8,23 +8,24 @@ import './App.css'
 // import StarWidget from './StarWidget'
 // import NestedComments from './NestedComments'
 // import CountriesWithCapitals from './CountriesWithCapitalsGame'
-import FlipCard from './FlippingComponent2'
+// import FlipCard from './FlippingComponent2'
+
+import TypingSpeedTest from "./TypingSpeedTest"
+import { css } from '@emotion/react'
+
 
 export default function App() {
   return (
-    <div style={{ padding: 24, display: "grid", gap: 24 }}>
-       <FlipCard
-        width={300}
-        height={200}
-        front={<div>✨ Special Offer</div>}
-        back={
-          <div>
-            <p>Use Code:</p>
-            <code>SAVE20</code>
-          </div>
-        }
-      />
+    // eslint-disable-next-line react/no-unknown-property
+    <div css={css({
+      width: "100vw",
+      height: "100vh",
+    })}>
+    <TypingSpeedTest/>
     </div>
+    // <div style={{ padding: 24, display: "grid", gap: 24 }}>
+      
+    // </div>
   );
 }
 

@@ -1,0 +1,75 @@
+.container {
+ background-color: darkslategrey;
+ width: 90%;
+ max-width: 700px;
+ display: flex;
+ flex-direction: column;
+ gap: 2rem;
+ margin: 3rem auto;
+position: relative;
+}
+
+.timer {
+   font-size: 700;
+   font-weight: 2rem;
+   color: red;
+}
+.paragraph {
+  display: flex;
+  flex-wrap: wrap;  
+  font-size: 1rem;
+}
+
+.char {
+    position: relative;
+}
+
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+
+.untyped {
+  color: inherit;
+}
+
+.hiddenInput {
+ position: absolute;
+ width: 0px;
+ height: 0px;
+ background-color: transparent;
+ border: none;
+ outline: none;
+}
+
+.caret::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 2px;
+  height: 1.4rem;
+  background-color: #f6c63e;
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.results{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
